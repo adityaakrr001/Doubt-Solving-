@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#08080b">
+
+    <title>Your Solution — Doubt Solving</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+<div class="noise"></div>
+
+
+<header class="topbar">
+
+    <div
+        class="brand"
+        onclick="location.href='index.html'"
+    >
+
+        <img
+            src="logo.png"
+            class="brand-logo"
+            alt="Doubt Solving"
+        >
+
+        <div class="brand-text">
+
+            <strong>Doubt Solving</strong>
+
+            <small>
+                AI Learning Assistant
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="step-indicator">
+
+        <span>01</span>
+
+        <i></i>
+
+        <span>02</span>
+
+        <i></i>
+
+        <span class="active">03</span>
+
+    </div>
+
+</header>
+
+
+<main class="result-page">
+
+
+    <section class="result-header">
+
+        <div class="eyebrow">
+
+            <span>✦</span>
+
+            YOUR SOLUTION
+
+        </div>
+
+
+        <h1>
+
+            Let's understand
+            <span>it.</span>
+
+        </h1>
+
+
+        <p id="resultMeta">
+            Preparing your answer...
+        </p>
+
+    </section>
+
+
+    <div
+        id="loadingState"
+        class="loading-card"
+    >
+
+        <div class="loader-orbit">
+            <div></div>
+        </div>
+
+
+        <h2>
+            Thinking through your doubt...
+        </h2>
+
+
+        <p>
+            Doubt Solving AI is analysing the question
+            and preparing an explanation.
+        </p>
+
+    </div>
+
+
+    <section
+        id="resultContent"
+        class="result-content hidden"
+    >
+
+
+        <div class="question-card">
+
+            <div class="card-label">
+                YOUR QUESTION
+            </div>
+
+
+            <div
+                id="questionOutput"
+                class="question-output"
+            >
+                —
+            </div>
+
+        </div>
+
+
+        <div class="answer-card">
+
+
+            <div class="answer-heading">
+
+                <div>
+
+                    <span class="card-label">
+                        DOUBT SOLVING AI
+                    </span>
+
+                    <h2>
+                        Here's the explanation.
+                    </h2>
+
+                </div>
+
+
+                <div class="ai-badge">
+                    ✦ AI
+                </div>
+
+            </div>
+
+
+            <div
+                id="answerOutput"
+                class="answer-body"
+            ></div>
+
+
+            <div class="result-actions">
+
+                <button id="copyBtn">
+                    ⧉ Copy
+                </button>
+
+                <button id="simplifyBtn">
+                    ✦ Explain simpler
+                </button>
+
+                <button id="newDoubtBtn">
+                    + New doubt
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="verification-card">
+
+            <div class="verification-icon">
+                ✓
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Reasoning-focused answer
+                </strong>
+
+
+                <p>
+                    AI-generated answers can occasionally
+                    contain mistakes. Verify important
+                    calculations, facts and academic work.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="followup-card">
+
+            <label>
+                HAVE A FOLLOW-UP?
+            </label>
+
+
+            <div class="followup-input">
+
+                <input
+                    id="followupInput"
+                    placeholder="Ask something about this answer..."
+                >
+
+
+                <button id="followupBtn">
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>

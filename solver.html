@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#08080b">
+
+    <title>Ask Your Doubt — Doubt Solving</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+<div class="noise"></div>
+
+
+<header class="topbar">
+
+    <div
+        class="brand"
+        onclick="location.href='index.html'"
+    >
+
+        <img
+            src="logo.png"
+            class="brand-logo"
+            alt="Doubt Solving"
+        >
+
+        <div class="brand-text">
+
+            <strong>Doubt Solving</strong>
+
+            <small>
+                  Learning Assistant
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <div class="step-indicator">
+
+        <span class="active">01</span>
+
+        <i></i>
+
+        <span>02</span>
+
+        <i></i>
+
+        <span>03</span>
+
+    </div>
+
+</header>
+
+
+<main class="solver-page">
+
+
+    <section class="solver-header">
+
+        <div class="eyebrow">
+
+            <span>✦</span>
+
+            ASK ANYTHING
+
+        </div>
+
+
+        <h1>
+
+            What's your
+            <span>doubt?</span>
+
+        </h1>
+
+
+        <p>
+            Type it, upload it, photograph it,
+            or simply speak it.
+        </p>
+
+    </section>
+
+
+    <section class="solver-card">
+
+
+        <div class="input-top">
+
+            <div>
+
+                <label>
+                    YOUR QUESTION
+                </label>
+
+                <span class="optional">
+                    Optional if uploading material
+                </span>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="voice-btn"
+                id="voiceBtn"
+            >
+                🎙 Speak
+            </button>
+
+        </div>
+
+
+        <textarea
+            id="question"
+            maxlength="10000"
+            placeholder="Type your question here...
+
+Example:
+Explain Newton's second law with a simple example."
+        ></textarea>
+
+
+        <div class="char-count">
+            <span id="charCount">0</span> / 10,000
+        </div>
+
+
+        <div class="settings-grid">
+
+
+            <div class="select-box">
+
+                <label>SUBJECT</label>
+
+                <select id="subject">
+
+                    <option>General</option>
+                    <option>Mathematics</option>
+                    <option>Physics</option>
+                    <option>Chemistry</option>
+                    <option>Biology</option>
+                    <option>Computer Science</option>
+                    <option>English</option>
+                    <option>History</option>
+                    <option>Geography</option>
+                    <option>Economics</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="select-box">
+
+                <label>LEVEL</label>
+
+                <select id="level">
+
+                    <option>Beginner</option>
+                    <option>School</option>
+                    <option>Class 9-10</option>
+                    <option>Class 11-12</option>
+                    <option>College</option>
+                    <option>Advanced</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="upload-title">
+
+            <label>
+                ADD MATERIAL
+            </label>
+
+            <span>
+                Images, PDFs and text files
+            </span>
+
+        </div>
+
+
+        <label
+            class="upload-zone"
+            for="fileInput"
+            id="uploadZone"
+        >
+
+            <input
+                id="fileInput"
+                type="file"
+                accept="image/*,.pdf,.txt,.md"
+                multiple
+                hidden
+            >
+
+
+            <div class="upload-icon">
+                ↑
+            </div>
+
+
+            <strong>
+                Upload your question
+            </strong>
+
+
+            <span>
+                Photos, screenshots, PDFs or text files
+            </span>
+
+
+            <small>
+                Maximum 4 MB per file
+            </small>
+
+        </label>
+
+
+        <div
+            id="filePreview"
+            class="file-preview"
+        ></div>
+
+
+        <div class="feature-row">
+
+
+            <div>
+
+                <span class="feature-icon">
+                    ∑
+                </span>
+
+                <div>
+
+                    <strong>
+                        Step-by-step
+                    </strong>
+
+                    <small>
+                        See the reasoning
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span class="feature-icon">
+                    ✦
+                </span>
+
+                <div>
+
+                    <strong>
+                        Simple explanation
+                    </strong>
+
+                    <small>
+                        Learn the concept
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <span class="feature-icon">
+                    ↗
+                </span>
+
+                <div>
+
+                    <strong>
+                        Multiple methods
+                    </strong>
+
+                    <small>
+                        Explore alternatives
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            id="solveBtn"
+            class="primary-btn solve-btn"
+        >
+
+            <span>
+                SOLVE MY DOUBT
+            </span>
+
+            <span class="arrow">
+                →
+            </span>
+
+        </button>
+
+
+        <div class="privacy-note">
+
+            <span>🔒</span>
+
+            Your API key stays securely on the server.
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
